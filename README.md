@@ -1,11 +1,15 @@
 # Creative-Coding
 
-## Theme
+## Theme:
 ![未命名作品 4](https://github.com/user-attachments/assets/78bb1bb8-e5ff-4d73-a358-3a0ea3fcb3f3)
 
 - My initial plan is to explore a different kind of interactivity: interaction through the eyes or through sound. For example, when the audience opens the code, it captures the surrounding sounds, or these sounds create a rhythm that feeds into the code.
 
-## first code
+## Plan:
+![未命名作品 4_副本](https://github.com/user-attachments/assets/e58376c0-b0a0-456e-a9a7-cce573b90b64)
+
+
+## first code:
 
 <img width="692" alt="截屏2025-02-04 下午8 59 43" src="https://github.com/user-attachments/assets/f2b0cde2-f8ed-44eb-beb3-341ea8e1736d" />
 
