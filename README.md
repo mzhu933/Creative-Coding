@@ -1,14 +1,14 @@
 # Creative-Coding
 # URL: https://mzhu933.github.io/Creative-Coding/
-## Theme:
+## - Theme:
 ![未命名作品 4](https://github.com/user-attachments/assets/78bb1bb8-e5ff-4d73-a358-3a0ea3fcb3f3)
 
 - My initial plan is to explore a different kind of interactivity: interaction through the eyes or through sound. For example, when the audience opens the code, it captures the surrounding sounds, or these sounds create a rhythm that feeds into the code.
 
-## Plan:
+## - Plan:
 ![未命名作品 4_副本](https://github.com/user-attachments/assets/e58376c0-b0a0-456e-a9a7-cce573b90b64)
 
-## first code:
+## - First code:
 
 <img width="692" alt="截屏2025-02-04 下午8 59 43" src="https://github.com/user-attachments/assets/f2b0cde2-f8ed-44eb-beb3-341ea8e1736d" />
 
@@ -105,17 +105,17 @@ class Walker {
 }
 ```
 
-### Disadvantages：
+### - Disadvantages：
 - Running too slow, it will take a long time to finish
 - To develop, I change it to
 - When images touch the edge of canvas, make it move to opposite way double jump. Change canvas size to 600x600. Change it to when "1.jpg" touch "2.jpg", "2.jpg" become "1.jpg". When "2.jpg" touch "3.jpg", "3.jpg" become "2.jpg". When "3.jpg" touch "1.jpg", "1.jpg"become "3.jpg". 
 
-## Chatgpt：
+## - Chatgpt：
 <img width="938" alt="截屏2025-02-06 下午7 03 57" src="https://github.com/user-attachments/assets/fe9a1b3d-dc73-4a24-935a-db36138784c0" />
 
 <img width="954" alt="截屏2025-02-06 下午7 04 17" src="https://github.com/user-attachments/assets/1ddd0951-9c05-4d53-9ad2-b928f5000b29" />
 
-## After change:
+## - After change:
 <img width="764" alt="截屏2025-02-06 下午7 08 23" src="https://github.com/user-attachments/assets/d9b54454-7893-4366-8a54-e98c84a2fd12" />
 
 
@@ -225,8 +225,8 @@ class Walker {
 - Too fast
 - When the first one changed, the others changed before they spread out. It ended too fast.
 
-### develop theme:
-The human brain is contradictory, never certain which force will take control in the end. It’s like the loop in my code: 1 convinces 2, 2 convinces 3, 3 convinces 1, it basically is like a cycle, but one element always begins to dominate.
+### - Develop theme:
+- The human brain is contradictory, never certain which force will take control in the end. It’s like the loop in my code: 1 convinces 2, 2 convinces 3, 3 convinces 1, it basically is like a cycle, but one element always begins to dominate.
 
 ![3](https://github.com/user-attachments/assets/518a9cee-d94e-471e-bb28-6581c18dfc62)
 ![2](https://github.com/user-attachments/assets/06c6e2b7-8e57-4eb9-b4d8-2a02a95fd906)
