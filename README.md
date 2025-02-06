@@ -8,12 +8,6 @@
 ## Plan:
 ![未命名作品 4_副本](https://github.com/user-attachments/assets/e58376c0-b0a0-456e-a9a7-cce573b90b64)
 
-## Chatgpt：
-<img width="938" alt="截屏2025-02-06 下午7 03 57" src="https://github.com/user-attachments/assets/fe9a1b3d-dc73-4a24-935a-db36138784c0" />
-
-<img width="954" alt="截屏2025-02-06 下午7 04 17" src="https://github.com/user-attachments/assets/1ddd0951-9c05-4d53-9ad2-b928f5000b29" />
-
-
 ## first code:
 
 <img width="692" alt="截屏2025-02-04 下午8 59 43" src="https://github.com/user-attachments/assets/f2b0cde2-f8ed-44eb-beb3-341ea8e1736d" />
@@ -111,9 +105,15 @@ class Walker {
 }
 ```
 
-- Disadvantages：Running too slow, it will take a long time to finish
+### Disadvantages：
+- Running too slow, it will take a long time to finish
 - To develop, I change it to
 - When images touch the edge of canvas, make it move to opposite way double jump. Change canvas size to 600x600. Change it to when "1.jpg" touch "2.jpg", "2.jpg" become "1.jpg". When "2.jpg" touch "3.jpg", "3.jpg" become "2.jpg". When "3.jpg" touch "1.jpg", "1.jpg"become "3.jpg". 
+
+## Chatgpt：
+<img width="938" alt="截屏2025-02-06 下午7 03 57" src="https://github.com/user-attachments/assets/fe9a1b3d-dc73-4a24-935a-db36138784c0" />
+
+<img width="954" alt="截屏2025-02-06 下午7 04 17" src="https://github.com/user-attachments/assets/1ddd0951-9c05-4d53-9ad2-b928f5000b29" />
 
 
 
