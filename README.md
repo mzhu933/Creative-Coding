@@ -219,7 +219,7 @@ class Walker {
     }
 }
 ```
-
+<img width="764" alt="截屏2025-02-06 下午7 08 23" src="https://github.com/user-attachments/assets/d9b54454-7893-4366-8a54-e98c84a2fd12" />
 
 - Too fast
 - When the first one changed, the others changed before they spread out. It ended too fast.
