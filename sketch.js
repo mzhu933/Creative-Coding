@@ -1,53 +1,55 @@
 let images = [];
-let avatars = ["林亚瑞尼亚", "伊梦易来狗", "展麟福音"];
 let selectBox;
 let gameStarted = false;
 let walkers = [];
+let options = ["select", "o–<", "*", "/|\、"];
 
 function preload() {
     for (let i = 1; i <= 3; i++) {
-        images.push(loadImage(`images/${i}.jpg`));
+        images.push(loadImage(`images/${i}.png`));
     }
 }
 
 function setup() {
     createCanvas(600, 600);
-    background(170, 200, 230);
+    background(255);
     textSize(24);
     textAlign(CENTER, CENTER);
+    textFont("serif");
     fill(0);
-    text("choose your avatar:", width / 2, 50);
-
+    text("1 eat 2, 2 eat 3, 3 eat 1", width / 2, 50);
+    
     for (let i = 0; i < images.length; i++) {
         image(images[i], width / 2 - 75 + i * 60, 100, 50, 50);
     }
-
+    
     selectBox = createSelect();
     selectBox.position(width / 2 - 50, 180);
-    avatars.forEach(name => selectBox.option(name));
+    options.forEach(opt => selectBox.option(opt));
     selectBox.changed(startGame);
 }
 
 function startGame() {
     gameStarted = true;
     selectBox.hide();
-    background(170, 200, 230);
-
-    for (let i = 0; i < 30; i++) {
-        walkers.push(new Walker(images[0], random(50), random(50)));
-        walkers.push(new Walker(images[1], random(width / 2 - 50, width / 2 + 50), random(height - 100, height - 50)));
-        walkers.push(new Walker(images[2], random(width - 50, width), random(50)));
+    background(255);
+    
+    for (let i = 0; i < 20; i++) {
+        walkers.push(new Walker(images[0], random(10, 200), random(10, 200)));
+        walkers.push(new Walker(images[1], random(250, 350), random(400, 550)));
+        walkers.push(new Walker(images[2], random(400, 590), random(10, 200)));
     }
 }
 
 function draw() {
     if (gameStarted) {
-        background(170, 200, 230);
-        for (let i = walkers.length - 1; i >= 0; i--) {
+        background(255);
+        
+        for (let i = 0; i < walkers.length; i++) {
             walkers[i].move();
             walkers[i].display();
             
-            for (let j = walkers.length - 1; j >= 0; j--) {
+            for (let j = 0; j < walkers.length; j++) {
                 if (i !== j && walkers[i].checkCollision(walkers[j])) {
                     if (walkers[i].img === images[0] && walkers[j].img === images[1]) {
                         walkers[j].img = images[0];
@@ -72,18 +74,14 @@ class Walker {
     }
 
     move() {
-        let stepX = random(-8, 8);
-        let stepY = random(-8, 8);
+        let stepX = random(-3, 3);
+        let stepY = random(-3, 3);
         
         this.x += stepX;
         this.y += stepY;
         
-        if (this.x <= 0 || this.x >= width - this.w) {
-            this.x -= stepX * 2;
-        }
-        if (this.y <= 0 || this.y >= height - this.h) {
-            this.y -= stepY * 2;
-        }
+        this.x = constrain(this.x, 0, width - this.w);
+        this.y = constrain(this.y, 0, height - this.h);
     }
 
     display() {
@@ -91,11 +89,12 @@ class Walker {
     }
 
     checkCollision(other) {
-        return (this.x < other.x + other.w &&
-                this.x + this.w > other.x &&
-                this.y < other.y + other.h &&
-                this.y + this.h > other.y);
+        return (
+            this.x < other.x + other.w &&
+            this.x + this.w > other.x &&
+            this.y < other.y + other.h &&
+            this.y + this.h > other.y
+        );
     }
 }
-
 
