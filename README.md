@@ -225,7 +225,14 @@ class Walker {
 - Too fast
 - When the first one changed, the others changed before they spread out. It ended too fast.
 
+### develop theme:
+The human brain is contradictory, never certain which force will take control in the end. It’s like the loop in my code: 1 convinces 2, 2 convinces 3, 3 convinces 1, it basically is like a cycle, but one element always begins to dominate.
+
+![3](https://github.com/user-attachments/assets/518a9cee-d94e-471e-bb28-6581c18dfc62)
+![2](https://github.com/user-attachments/assets/06c6e2b7-8e57-4eb9-b4d8-2a02a95fd906)
+![1](https://github.com/user-attachments/assets/acd05063-4910-43a1-849f-f719edc5483c)
 
 
 
+<img width="653" alt="截屏2025-02-06 下午7 40 51" src="https://github.com/user-attachments/assets/e0987342-18ee-4905-b5a7-671c093a1012" />
 
