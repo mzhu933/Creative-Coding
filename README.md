@@ -8,6 +8,11 @@
 ## Plan:
 ![未命名作品 4_副本](https://github.com/user-attachments/assets/e58376c0-b0a0-456e-a9a7-cce573b90b64)
 
+## Chatgpt：
+<img width="938" alt="截屏2025-02-06 下午7 03 57" src="https://github.com/user-attachments/assets/fe9a1b3d-dc73-4a24-935a-db36138784c0" />
+
+<img width="954" alt="截屏2025-02-06 下午7 04 17" src="https://github.com/user-attachments/assets/1ddd0951-9c05-4d53-9ad2-b928f5000b29" />
+
 
 ## first code:
 
