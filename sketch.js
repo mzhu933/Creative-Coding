@@ -5,6 +5,8 @@ let walkers = [];
 let options = ["select", "o–<", "*", "/|\、"];
 let circleX, circleY, circleRadius = 35; 
 
+
+
 function preload() {
     for (let i = 1; i <= 3; i++) {
         images.push(loadImage(`images/${i}.png`));
@@ -30,7 +32,24 @@ function setup() {
     selectBox.position(width / 2 - 50, 180);
     options.forEach(opt => selectBox.option(opt));
     selectBox.changed(startGame);
+
+    textSize(9);
+    textAlign(CENTER, CENTER);
+    textFont("Courier New");
+    fill(0);
+    text(
+        "In this cycle, 1 seeks to persuade 2, 2 attempts to influence 3, and 3 ultimately convinces 1.\n" +
+        "There is no clear endpoint, yet at a certain point, one element emerges as the dominant force.\n" +
+        "This mirrors the feedback mechanisms within the nervous system: neurons release electrical signals\n" +
+        "and neurotransmitters, activating surrounding glial cells, whose responses regulate blood flow,\n" +
+        "altering the state of the neurons. The fluctuations in blood flow determine the energy and activity\n" +
+        "of the neurons, intertwining, adjusting, and feeding back into an ever-shifting loop.\n\n" +
+        "Are the decisions made by the brain truly aligned with intention? The answer remains in motion...",
+        width / 2, 280
+      );
+      
 }
+
 
 function startGame() {
     gameStarted = true;
