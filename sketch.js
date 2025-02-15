@@ -3,6 +3,7 @@ let selectBox;
 let gameStarted = false;
 let walkers = [];
 let options = ["select", "o–<", "*", "/|\、"];
+let circleX, circleY, circleRadius = 35; 
 
 function preload() {
     for (let i = 1; i <= 3; i++) {
@@ -11,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(600, 600);
+    createCanvas(windowWidth, windowHeight);
     background(255);
     textSize(24);
     textAlign(CENTER, CENTER);
@@ -19,9 +20,11 @@ function setup() {
     fill(0);
     text("1 eat 2, 2 eat 3, 3 eat 1", width / 2, 50);
     
+    
     for (let i = 0; i < images.length; i++) {
         image(images[i], width / 2 - 75 + i * 60, 100, 50, 50);
     }
+    
     
     selectBox = createSelect();
     selectBox.position(width / 2 - 50, 180);
@@ -34,6 +37,14 @@ function startGame() {
     selectBox.hide();
     background(255);
     
+   
+    circleX = width / 2;
+    circleY = height / 2;
+    noFill();
+    stroke(0);
+    ellipse(circleX, circleY, 70, 70);
+    
+    
     for (let i = 0; i < 20; i++) {
         walkers.push(new Walker(images[0], random(10, 200), random(10, 200)));
         walkers.push(new Walker(images[1], random(250, 350), random(400, 550)));
@@ -45,9 +56,16 @@ function draw() {
     if (gameStarted) {
         background(255);
         
+        
+        noFill();
+        stroke(0);
+        ellipse(circleX, circleY, 70, 70);
+        
+        
         for (let i = 0; i < walkers.length; i++) {
             walkers[i].move();
             walkers[i].display();
+            
             
             for (let j = 0; j < walkers.length; j++) {
                 if (i !== j && walkers[i].checkCollision(walkers[j])) {
@@ -60,6 +78,11 @@ function draw() {
                     }
                 }
             }
+            
+            
+            if (walkers[i].checkCircleCollision(circleX, circleY, circleRadius)) {
+                walkers[i].img = images[walkers[i].originalIndex];
+            }
         }
     }
 }
@@ -71,6 +94,7 @@ class Walker {
         this.y = y;
         this.w = 50;
         this.h = 50;
+        this.originalIndex = images.indexOf(img); 
     }
 
     move() {
@@ -96,5 +120,19 @@ class Walker {
             this.y + this.h > other.y
         );
     }
+
+    
+    checkCircleCollision(cx, cy, radius) {
+        let distX = this.x + this.w / 2 - cx;
+        let distY = this.y + this.h / 2 - cy;
+        let distance = sqrt(distX * distX + distY * distY);
+        return distance < radius + this.w / 2;
+    }
+}
+
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    background(255);
 }
 
