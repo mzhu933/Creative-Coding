@@ -5,8 +5,6 @@ let walkers = [];
 let options = ["select", "o–<", "*", "/|\、"];
 let circleX, circleY, circleRadius = 35; 
 
-
-
 function preload() {
     for (let i = 1; i <= 3; i++) {
         images.push(loadImage(`images/${i}.png`));
@@ -22,11 +20,9 @@ function setup() {
     fill(0);
     text("1 eat 2, 2 eat 3, 3 eat 1", width / 2, 50);
     
-    
     for (let i = 0; i < images.length; i++) {
         image(images[i], width / 2 - 75 + i * 60, 100, 50, 50);
     }
-    
     
     selectBox = createSelect();
     selectBox.position(width / 2 - 50, 180);
@@ -46,23 +42,19 @@ function setup() {
         "of the neurons, intertwining, adjusting, and feeding back into an ever-shifting loop.\n\n" +
         "Are the decisions made by the brain truly aligned with intention? The answer remains in motion...",
         width / 2, 280
-      );
-      
+    );
 }
-
 
 function startGame() {
     gameStarted = true;
     selectBox.hide();
     background(255);
     
-   
-    circleX = width / 2;
-    circleY = height / 2;
+    circleX = mouseX; 
+    circleY = mouseY; 
     noFill();
     stroke(0);
     ellipse(circleX, circleY, 70, 70);
-    
     
     for (let i = 0; i < 20; i++) {
         walkers.push(new Walker(images[0], random(10, 200), random(10, 200)));
@@ -76,10 +68,19 @@ function draw() {
         background(255);
         
         
+        circleX = mouseX;
+        circleY = mouseY;
+        
         noFill();
         stroke(0);
         ellipse(circleX, circleY, 70, 70);
+
         
+        textSize(9);
+        textFont("Courier New");
+        fill(0);
+        text("YOU! Control the chaos within, click the button - who will conquer... both are you…\n" +
+        "When time weighs heavy, do you choose to restore order? Press the control button...", 250, 20);
         
         for (let i = 0; i < walkers.length; i++) {
             walkers[i].move();
@@ -97,12 +98,14 @@ function draw() {
                     }
                 }
             }
-            
-            
-            if (walkers[i].checkCircleCollision(circleX, circleY, circleRadius)) {
-                walkers[i].img = images[walkers[i].originalIndex];
-            }
         }
+    }
+}
+
+
+function mousePressed() {
+    for (let i = 0; i < walkers.length; i++) {
+        walkers[i].img = images[walkers[i].originalIndex]; 
     }
 }
 
@@ -139,19 +142,9 @@ class Walker {
             this.y + this.h > other.y
         );
     }
-
-    
-    checkCircleCollision(cx, cy, radius) {
-        let distX = this.x + this.w / 2 - cx;
-        let distY = this.y + this.h / 2 - cy;
-        let distance = sqrt(distX * distX + distY * distY);
-        return distance < radius + this.w / 2;
-    }
 }
-
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
     background(255);
 }
-
