@@ -237,7 +237,7 @@ class Walker {
 <img width="653" alt="截屏2025-02-06 下午7 40 51" src="https://github.com/user-attachments/assets/e0987342-18ee-4905-b5a7-671c093a1012" />
 
 
-## Reflection on the chatGPT Answer and My Understanding
+## - Reflection on the chatGPT Answer and My Understanding
 - Working through this with gpt has given me a deeper insight into how to build interactions between objects in code, particularly the cyclic behavior I had in mind for the images. At first, I knew I wanted to create a sequence where three images randomly moved and transformed upon collision. But it was tricky, how do I make the images change in a continuous, cyclical manner, where one image “eats” the next in line? I could see the mechanics of collision detection, but the actual cycle was harder to pin down.
 
 - What I learned from the chatGPT's guidance was that breaking down the images into an array, like a list of ordered objects, makes this transformation simple. The core idea was understanding the index of each image and letting it guide the logic for change. The formula:
@@ -249,6 +249,33 @@ class Walker {
 - The process of finding the right image index with ``` indexOf() ``` and comparing it was a small shift in perspective for me. It opened up this way of thinking that allowed the cycle to be dynamic and automatic. No more hard-coding conditions for each image pair; instead, the sequence becomes inherent to how the code is written. The collision detection now feels like a natural extension of the cycle, not a set of isolated events.
 
 - This experience also made me reflect on how I approach problems in general. Sometimes, the solution lies in simplifying the structure of how things are ordered. I had been focusing on the outcome (the images changing) but hadn’t realized the power of just organizing them in a way that the cycle takes care of itself.
+
+
+
+### - Feedback:
+- The execution of the visual effects could be enhanced, such as by using transparency in your drawings to allow the forms to overlap in a more organic way, and by centring the canvas on the page (the canvas might also be larger, or fill the window).
+- making the neurological metaphor more apparent to the user, e.g. via the text prompt and drop-down selection options, which are currently quite enigmatic.
+- Need to clearly introduce your creative work (e.g. explain what it is, how it works)
+- Add more elements to enhance the interaction between the three images, such as obstacles. (Place a 70x70 circle in the middle, if any of the three png images collide with the circle, they will reset to their original png.)
+- Make the movement more dynamic. 
+### - Further development:
+- Click the circle to make it move to a random position. 
+- Or make it follow the mouse.
+- Text may possible：YOU! Control the chaos within, click the button - who will conquer... both are you…
+- Change color
+
+
+<img width="719" alt="截屏2025-02-17 上午11 21 07" src="https://github.com/user-attachments/assets/e4707625-8669-455c-be47-581c1f0e2140" />
+
+### - Chatgpt:
+<img width="942" alt="截屏2025-02-17 上午11 21 45" src="https://github.com/user-attachments/assets/5e2c5c05-a17f-4393-af89-79f6fb7377d2" />
+
+## - Reflection on Understanding Code from ChatGPT
+- The way mousePressed() resets the walkers' images feels like a simple yet direct form of interaction between human intention and code execution. The walkers move, change, and react based on their environment, but with just one click, they return to their original state. It’s like a conversation between me and the code: letting it evolve on its own, but stepping in when I decide to reset things.
+
+- The for loop systematically goes through each walker, making sure none are left unchanged. The originalIndex acts as a memory, a reference point that keeps track of what each walker was before. This makes me think about how code, even when it appears to be constantly shifting, still follows a structured logic beneath the surface.
+
+- Writing and understanding code isn’t just about making things work, it’s about shaping interactions, setting up conditions, and deciding when to interfere. The walkers follow their own cycle, but I, as the user, always have the power to bring them back to their original form.
 
 
 
