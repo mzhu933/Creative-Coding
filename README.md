@@ -264,10 +264,15 @@ class Walker {
 - Text may possible：YOU! Control the chaos within, click the button - who will conquer... both are you…
 - Change color
 
-
+### - New code:
 <img width="719" alt="截屏2025-02-17 上午11 21 07" src="https://github.com/user-attachments/assets/e4707625-8669-455c-be47-581c1f0e2140" />
 
-### - Chatgpt:
+- change images to transparency (png - delete white background)
+- fill the window
+- making the neurological metaphor more apparent to the user
+- added a new elements to give more interaction
+
+### - Learning from Chatgpt:
 <img width="942" alt="截屏2025-02-17 上午11 21 45" src="https://github.com/user-attachments/assets/5e2c5c05-a17f-4393-af89-79f6fb7377d2" />
 
 ## - Reflection on Understanding Code from ChatGPT
@@ -278,5 +283,8 @@ class Walker {
 - Writing and understanding code isn’t just about making things work, it’s about shaping interactions, setting up conditions, and deciding when to interfere. The walkers follow their own cycle, but I, as the user, always have the power to bring them back to their original form.
 
 
+<img width="1440" alt="截屏2025-02-17 上午11 33 01" src="https://github.com/user-attachments/assets/b5369a2e-235b-4945-ba56-5525944edd3c" />
+
+<img width="1432" alt="截屏2025-02-17 上午11 35 01" src="https://github.com/user-attachments/assets/0f972b75-a120-43c0-8255-fa047da9b1d1" />
 
 
