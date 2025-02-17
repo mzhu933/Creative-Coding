@@ -287,4 +287,6 @@ class Walker {
 
 <img width="1432" alt="截屏2025-02-17 上午11 35 01" src="https://github.com/user-attachments/assets/0f972b75-a120-43c0-8255-fa047da9b1d1" />
 
+## - Part of Refelction
 
+In the end, I see this creation not just as an exploration of interactive art but as a breakthrough in my own way of thinking. Initially, I simply wanted to express the concept of “loop” through code, but throughout the process, I realized it was more about control, surrender, and choice. I created a loop within my work, yet at the same time, I found myself constantly adjusting, dismantling, and recreating within my own cycle. I found that interaction is not just between the viewer and the work, it is a dialogue between oneself and their thoughts, between the individual and the world.
