@@ -237,7 +237,7 @@ class Walker {
 <img width="653" alt="截屏2025-02-06 下午7 40 51" src="https://github.com/user-attachments/assets/e0987342-18ee-4905-b5a7-671c093a1012" />
 
 
-## - Reflection on the chatGPT Answer and My Understanding
+## - Reflection on the ChatGPT Answer and My Understanding
 - Working through this with gpt has given me a deeper insight into how to build interactions between objects in code, particularly the cyclic behavior I had in mind for the images. At first, I knew I wanted to create a sequence where three images randomly moved and transformed upon collision. But it was tricky, how do I make the images change in a continuous, cyclical manner, where one image “eats” the next in line? I could see the mechanics of collision detection, but the actual cycle was harder to pin down.
 
 - What I learned from the chatGPT's guidance was that breaking down the images into an array, like a list of ordered objects, makes this transformation simple. The core idea was understanding the index of each image and letting it guide the logic for change. The formula:
@@ -287,6 +287,6 @@ class Walker {
 
 <img width="1432" alt="截屏2025-02-17 上午11 35 01" src="https://github.com/user-attachments/assets/0f972b75-a120-43c0-8255-fa047da9b1d1" />
 
-## Conclusion 
+## - Conclusion 
 
 In the end, I see this creation not just as an exploration of interactive art but as a breakthrough in my own way of thinking. Initially, I simply wanted to express the concept of “loop” through code, but throughout the process, I realized it was more about control, surrender, and choice. I created a loop within my work, yet at the same time, I found myself constantly adjusting, dismantling, and recreating within my own cycle. I found that interaction is not just between the viewer and the work, it is a dialogue between oneself and their thoughts, between the individual and the world.
